@@ -1,34 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../../styles/menulatera.css";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import "../../styles/menulatera.css";
 
 const navigation = [
-  { name: "Historia", href: "#" },
-  { name: "Informate", href: "#" },
-  { name: "Oficina", href: "#" },
-  { name: "Nosotros", href: "#" },
+  { name: "Inicio", href: "#" },
+  { name: "Productos", href: "#" },
+  { name: "Ofertas", href: "#" },
+  { name: "Contacto", href: "#" },
 ];
 
 export function PanelPrincipal() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <a href="https://unsm.edu.pe/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Universida Nacional de San Martin</span>
+            <a href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Rantikuy</span>
               <img
                 className="h-16 w-auto"
-                src="../../../Logo-UNSM.png"
-                alt=""
+                src="https://img.icons8.com/?size=100&id=13014&format=png&color=000000"
+                alt="Rantikuy Logo"
               />
             </a>
           </div>
@@ -61,6 +60,24 @@ export function PanelPrincipal() {
         >
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <a href="/" className="-m-1.5 p-1.5">
+                <span className="sr-only">Rantikuy</span>
+                <img
+                  className="h-8 w-auto"
+                  src="../../../logo-rantikuy.png"
+                  alt="Rantikuy Logo"
+                />
+              </a>
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
@@ -80,7 +97,7 @@ export function PanelPrincipal() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8 ">
+      <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -93,30 +110,28 @@ export function PanelPrincipal() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl absolute right-96 top-32 ">
+        <div className="mx-auto max-w-2xl py-32">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Archivero central Universidad Nacional de San Martin
+              Bienvenidos a RantikuyExpress
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              El archivo central es vital para cualquier organización. Preserva
-              la memoria institucional, facilita la gestión documental y
-              garantiza el cumplimiento legal. Además, protege información
-              sensible y optimiza el espacio. Un archivo eficiente impulsa la
-              toma de decisiones y la seguridad de la información.
+              Descubre una amplia variedad de productos de alta calidad a los
+              mejores precios. ¡Explora nuestras ofertas y encuentra lo que
+              necesitas en Rantikuy!
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/solicitudgrado"
+                href="/productos"
                 className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Realizar solicitud de grado <span aria-hidden="true">→</span>
+                Ver productos <span aria-hidden="true">→</span>
               </a>
               <a
-                href="/solicitudresolucion"
+                href="/ofertas"
                 className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Realizar solicitud de resolución <span aria-hidden="true">→</span>
+                Ver ofertas <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
