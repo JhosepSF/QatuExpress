@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { PanelPrincipal } from "./modules/pages/PanelPrincipal";
-import { SolicitudGrado } from "./modules/pages/SolicitudGrado";
-import { SolicitudResolucion } from "./modules/pages/SolicitudResolucion";
-
+import { Producto } from "./modules/pages/Producto.jsx"
 
 function App() {
   return (
@@ -15,9 +13,7 @@ function App() {
           
           {/* demas rutas */}
           <Route path="/panelprincipal" element={<PanelPrincipal />} />
-          <Route path="/solicitudgrado" element={<SolicitudGrado />} />
-          <Route path="/solicitudresolucion" element={<SolicitudResolucion />} />
-          
+          <Route path="/producto" element={<Producto />} />
         </Routes>
       </div>
     </BrowserRouter>
