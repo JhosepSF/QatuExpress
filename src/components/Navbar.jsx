@@ -4,11 +4,10 @@ import '../styles/Navbar.css';
 export function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-titulo"></div>
+      <div className="navbar-titulo">QatuExpress</div>
       <ul className="navbar-links">
         <li><a href="/">Inicio</a></li>
-        <li><a href="/*">Productos</a></li>
-        <li><a href="/*">Contacto</a></li>
+        <li><a href="/productos">Productos</a></li>
         <li className="dropdown">
           <a href="/#" className="dropbtn">Categorías</a>
           <div className="dropdown-content">
@@ -21,7 +20,7 @@ export function Navbar() {
       <div className="navbar-cart">
         <a href="/carrito">Carrito (0)</a>
       </div>
-      <div className="navbar-login">
+      <div className="navbar-usuario">
         <a href="/login">Iniciar Sesión</a>
       </div>
     </nav>
