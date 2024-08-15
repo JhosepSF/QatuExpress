@@ -65,9 +65,13 @@
   display: block;
 }
 
-.navbar-cart {
+.navbar-user-cart {
   display: flex;
   align-items: center;
+}
+
+.navbar-cart {
+  margin-right: 10px; 
 }
 
 .navbar-cart a {
@@ -80,4 +84,15 @@
 
 .navbar-cart a:hover {
   background-color: #45a049;
+}
+
+.navbar-usuario a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.navbar-usuario a:hover {
+  background-color: #4CAF50;
 }

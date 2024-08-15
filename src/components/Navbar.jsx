@@ -17,11 +17,13 @@ export function Navbar() {
           </div>
         </li>
       </ul>
-      <div className="navbar-cart">
-        <a href="/carrito">Carrito (0)</a>
-      </div>
-      <div className="navbar-usuario">
-        <a href="/login">Iniciar Sesión</a>
+      <div className="navbar-user-cart">
+        <div className="navbar-cart">
+          <a href="/carrito">Carrito (0)</a>
+        </div>
+        <div className="navbar-usuario">
+          <a href="/login">Iniciar Sesión</a>
+        </div>
       </div>
     </nav>
   );
